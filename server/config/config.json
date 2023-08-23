@@ -1,0 +1,29 @@
+{
+  "development": {
+    "username": "h57m11cywlgy5o29u80h",
+    "password": "pscale_pw_f9yfw0i1NO2eDunDaPKTWM0SwgZ9eUt51mjfZ4Nfz59",
+    "database": "housetable",
+    "host": "aws.connect.psdb.cloud",
+    "dialect": "mysql",
+    "ssl": true, 
+    "dialectOptions": {
+      "ssl": {
+        "require": true 
+      }
+  }
+},
+  "test": {
+    "username": "h57m11cywlgy5o29u80h",
+    "password": "pscale_pw_f9yfw0i1NO2eDunDaPKTWM0SwgZ9eUt51mjfZ4Nfz59",
+    "database": "housetable",
+    "host": "aws.connect.psdb.cloud",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "h57m11cywlgy5o29u80h",
+    "password": "pscale_pw_f9yfw0i1NO2eDunDaPKTWM0SwgZ9eUt51mjfZ4Nfz59",
+    "database": "housetable",
+    "host": "aws.connect.psdb.cloud",
+    "dialect": "mysql"
+  }
+}

@@ -1,6 +1,12 @@
 const express = require('express')
 const app = express()
 
+// For parsing application/json
+app.use(express.json());
+ 
+// For parsing application/x-www-form-urlencoded
+app.use(express.urlencoded({ extended: true }));
+
 var houseRouter = require('./Routes/house.routes');
 
 app.use('/api/house', houseRouter);
