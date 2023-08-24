@@ -4,6 +4,6 @@ const router = express.Router();
 
 router.post('/', houseControllers.create);
 router.get('/:id', houseControllers.get);
-// router.put('/:id', houseControllers.update);
+router.put('/:id', houseControllers.update);
 
 module.exports = router

@@ -1,9 +1,16 @@
 POST http://127.0.0.1:5000/api/house
 Content-Type: application/json
 
-{ "address": "1 Broadway Ave", "currentValue": 100, "loanAmount": 1000, "risk": 0.5 }
+{ "address": "1 Broadway Ave", "currentValue": 100, "loanAmount": 40, "risk": 0.5 }
 
 ###
 
-GET http://127.0.0.1:5000/api/house/1234
+GET http://127.0.0.1:5000/api/house/14
 Content-Type: application/json
+
+###
+
+PUT http://127.0.0.1:5000/api/house/14
+Content-Type: application/json
+
+{ "currentValue": 70, "loanAmount": 60 }
