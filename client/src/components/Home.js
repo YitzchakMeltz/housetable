@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
 import { Grid, Typography, Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { ReactComponent as FullLogo } from '../resources/svg/FullLogo.svg'
@@ -66,6 +67,8 @@ const styles = {
 
 function Home() {
 
+    const navigate = useNavigate()
+
     return (
         <Root>
             <Logo />
@@ -74,7 +77,7 @@ function Home() {
                     <HomeRounded sx={styles.icon} />
                     <CardLabel>View existing home</CardLabel>
                 </Card>
-                <Card>
+                <Card onClick={() => navigate('/add-home')}>
                     <AddHomeRounded sx={styles.icon} />
                     <CardLabel>Add new home</CardLabel>
                 </Card>
