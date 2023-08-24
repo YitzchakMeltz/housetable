@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import AppRoutes from "./components/AppRoutes";
+import { Grid, Typography, Button } from '@mui/material';
+import { styled } from '@mui/material/styles';
+
+const Root = styled(Grid)(({ theme }) => ({
+    width: '100%',
+    height: '100%',
+    background: 'radial-gradient(ellipse at left bottom, #fff 0%, #fff7ed 62%, #fff7ed 100%)',
+    backgroundColor: 'red',
+}));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Root>
+      <AppRoutes />
+    </Root>
   );
 }
 
