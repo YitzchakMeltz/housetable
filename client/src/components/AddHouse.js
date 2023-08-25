@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Grid, Typography, Button, TextField, CircularProgress } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Header from './Header';
+import HouseAddedDialog from './HouseAddedDialog';
 
 const Root = styled(Grid)(({ theme }) => ({
     width: '100%',
@@ -63,6 +64,8 @@ function AddHouse() {
 
     const [formDetails, setFormDetails] = useState({});
     const [sending, setSending] = useState(false);
+    const [openSuccessDialog, setOpenSuccessDialog] = useState(false);
+    const [id, setId] = useState('');
 
     const addNewHouse = async () => {
         setSending(true);
@@ -73,7 +76,17 @@ function AddHouse() {
         });
         setSending(false);
 
-        console.log('Response: ', response);
+        const responseObject = await response?.json();
+
+        setId(responseObject?.house?.id);
+        setOpenSuccessDialog(true);
+
+        console.log("Response Object: ", responseObject);
+    }
+
+    const onSuccessDialogClose = () => {
+        setFormDetails({});
+        setOpenSuccessDialog(false);
     }
 
     return (
@@ -81,11 +94,12 @@ function AddHouse() {
             <Header />
             <FormWrapper>
                 <Title>Add your details to our system</Title>
-                <InputField label='Address' variant='outlined' size='small' value={formDetails?.address} onChange={(e) => setFormDetails({ ...formDetails, address: e?.target?.value })} />
-                <InputField label='Current value' variant='outlined' size='small' value={formDetails?.currentValue} onChange={(e) => setFormDetails({ ...formDetails, currentValue: e?.target?.value })} />
-                <InputField label='Loan amount' variant='outlined' size='small' value={formDetails?.loanAmount} onChange={(e) => setFormDetails({ ...formDetails, loanAmount: e?.target?.value })} />
-                <SubmitButton onClick={addNewHouse} disabled={sending}>Add home {sending && <Loading />}</SubmitButton>
+                <InputField label='Address' variant='outlined' size='small' value={formDetails?.address || ''} onChange={(e) => setFormDetails({ ...formDetails, address: e?.target?.value })} />
+                <InputField label='Current value' variant='outlined' size='small' value={formDetails?.currentValue || ''} onChange={(e) => setFormDetails({ ...formDetails, currentValue: e?.target?.value })} />
+                <InputField label='Loan amount' variant='outlined' size='small' value={formDetails?.loanAmount || ''} onChange={(e) => setFormDetails({ ...formDetails, loanAmount: e?.target?.value })} />
+                <SubmitButton onClick={addNewHouse} disabled={sending}>Add house {sending && <Loading />}</SubmitButton>
             </FormWrapper>
+            <HouseAddedDialog id={id} open={openSuccessDialog} handleClose={onSuccessDialogClose} />
         </Root>
     );
 }

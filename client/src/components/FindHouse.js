@@ -1,9 +1,14 @@
 import React from "react";
 import { useState } from "react";
-import { Grid, TextField, InputAdornment, Button, Typography } from "@mui/material";
+import {
+  Grid,
+  TextField,
+  InputAdornment,
+  Button,
+  Typography,
+} from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { useNavigate } from "react-router";
-import { useSearchParams } from "react-router-dom";
 import { SearchRounded, EastRounded } from "@mui/icons-material";
 import Header from "./Header";
 
@@ -61,6 +66,7 @@ const SearchButton = styled(Button)(({ theme }) => ({
   },
   "&:disabled": {
     color: "#FFF",
+    opacity: 0.7,
   },
 }));
 
@@ -70,28 +76,13 @@ const SearchButtonIcon = styled(EastRounded)(({ theme }) => ({
   marginInlineStart: 10,
 }));
 
-function FindHouse({ formDetails, setFormDetails }) {
+function FindHouse() {
   const navigate = useNavigate();
-  const [searchParams, setSearchParams] = useSearchParams();
-  const [id, setId] = useState();
-  const [sending, setSending] = useState(false);
+  const [id, setId] = useState('');
 
-  const getHouse = async () => {
-    setSending(true);
-    const response = await fetch('http://127.0.0.1:5000/api/house/' + id, {
-        method: "GET",
-        headers: {"Content-type": "application/json"}
-    });
-    setSending(false);
-
-    const responseObject = await response?.json();
-
-    setFormDetails(responseObject.house)
-
-    setSearchParams({id: responseObject?.house?.id})
-
-    console.log('Response Object: ', responseObject);
-}
+  const searchForHouse = async () => {
+    navigate('/view-house?id=' + id)
+  };
 
   return (
     <Root>
@@ -112,7 +103,7 @@ function FindHouse({ formDetails, setFormDetails }) {
             ),
             endAdornment: (
               <InputAdornment position="end">
-                <SearchButton onClick={getHouse}>
+                <SearchButton onClick={searchForHouse}>
                   Search
                   <SearchButtonIcon />
                 </SearchButton>

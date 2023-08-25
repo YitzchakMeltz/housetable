@@ -10,7 +10,7 @@ Content-Type: application/json
 
 ###
 
-PUT http://127.0.0.1:5000/api/house/14
+PUT http://127.0.0.1:5000/api/house/21
 Content-Type: application/json
 
 { "currentValue": 70, "loanAmount": 60 }

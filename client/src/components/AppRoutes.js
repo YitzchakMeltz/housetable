@@ -2,7 +2,8 @@ import React from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Home from './Home'
 import AddHouse from './AddHouse';
-import HouseLookup from './HouseLookup';
+import ViewHouse from './ViewHouse';
+import FindHouse from './FindHouse';
 
 function AppRoutes() {
 
@@ -11,7 +12,8 @@ function AppRoutes() {
         <Routes>
           <Route exact path='/' element={<Home />}/>
           <Route path='/add-house' element={<AddHouse/>} />
-          <Route path='/search' element={<HouseLookup/>} />
+          <Route path='/search' element={<FindHouse/>} />
+          <Route path='/view-house' element={<ViewHouse/>} />
         </Routes>
     </BrowserRouter>
   );
