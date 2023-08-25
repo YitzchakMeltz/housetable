@@ -7,7 +7,6 @@ import { useNavigate } from 'react-router';
 
 const Root = styled(Grid)(({ theme }) => ({
     width: '100%',
-    marginBottom: '10vh',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',

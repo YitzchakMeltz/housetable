@@ -16,6 +16,7 @@ const Root = styled(Grid)(({ theme }) => ({
 const FormWrapper = styled(Grid)(({ theme }) => ({
     width: '30vw',
     padding: '6vh',
+    marginTop: '10vh',
     backgroundColor: '#FFF',
     borderRadius: 20,
     boxShadow: '0 0 40px #baa28870',
@@ -58,7 +59,7 @@ const Loading = styled(CircularProgress)(({ theme }) => ({
     color: '#FFF',
 }));
 
-function AddHome() {
+function AddHouse() {
 
     const [formDetails, setFormDetails] = useState({});
     const [sending, setSending] = useState(false);
@@ -80,13 +81,13 @@ function AddHome() {
             <Header />
             <FormWrapper>
                 <Title>Add your details to our system</Title>
-                <InputField label='Address' variant='outlined' size='small' onChange={(e) => setFormDetails({ ...formDetails, address: e?.target?.value })} />
-                <InputField label='Current value' variant='outlined' size='small' onChange={(e) => setFormDetails({ ...formDetails, currentValue: e?.target?.value })} />
-                <InputField label='Loan amount' variant='outlined' size='small' onChange={(e) => setFormDetails({ ...formDetails, loanAmount: e?.target?.value })} />
+                <InputField label='Address' variant='outlined' size='small' value={formDetails?.address} onChange={(e) => setFormDetails({ ...formDetails, address: e?.target?.value })} />
+                <InputField label='Current value' variant='outlined' size='small' value={formDetails?.currentValue} onChange={(e) => setFormDetails({ ...formDetails, currentValue: e?.target?.value })} />
+                <InputField label='Loan amount' variant='outlined' size='small' value={formDetails?.loanAmount} onChange={(e) => setFormDetails({ ...formDetails, loanAmount: e?.target?.value })} />
                 <SubmitButton onClick={addNewHouse} disabled={sending}>Add home {sending && <Loading />}</SubmitButton>
             </FormWrapper>
         </Root>
     );
 }
 
-export default AddHome;
+export default AddHouse;

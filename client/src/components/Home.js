@@ -73,11 +73,11 @@ function Home() {
         <Root>
             <Logo />
             <CardsContainer>
-                <Card>
+                <Card onClick={() => navigate('/search')}>
                     <HomeRounded sx={styles.icon} />
                     <CardLabel>View existing home</CardLabel>
                 </Card>
-                <Card onClick={() => navigate('/add-home')}>
+                <Card onClick={() => navigate('/add-house')}>
                     <AddHomeRounded sx={styles.icon} />
                     <CardLabel>Add new home</CardLabel>
                 </Card>
