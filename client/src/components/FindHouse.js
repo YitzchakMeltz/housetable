@@ -52,6 +52,18 @@ const SearchBar = styled(TextField)(({ theme }) => ({
     borderRadius: 30,
     border: "#EBEBEB 1px solid !important",
   },
+  [theme.breakpoints.down("md")]: {
+    width: "80%",
+    "&:focus-within": {
+      width: "90%",
+    },
+  },
+  [theme.breakpoints.down("sm")]: {
+    width: "90%",
+    "&:focus-within": {
+      width: "90%",
+    },
+  },
 }));
 
 const SearchButton = styled(Button)(({ theme }) => ({
@@ -78,10 +90,10 @@ const SearchButtonIcon = styled(EastRounded)(({ theme }) => ({
 
 function FindHouse() {
   const navigate = useNavigate();
-  const [id, setId] = useState('');
+  const [id, setId] = useState("");
 
   const searchForHouse = async () => {
-    navigate('/view-house?id=' + id)
+    navigate("/view-house?id=" + id);
   };
 
   return (

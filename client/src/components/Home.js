@@ -4,6 +4,7 @@ import { Grid, Typography, Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { ReactComponent as FullLogo } from '../resources/svg/FullLogo.svg'
 import { HomeRounded, AddHomeRounded } from '@mui/icons-material';
+import { useTheme } from '@mui/material/styles';
 
 const Root = styled(Grid)(({ theme }) => ({
     width: '100%',
@@ -45,6 +46,10 @@ const Card = styled(Grid)(({ theme }) => ({
     '&:active': {
         transform: 'scale(0.9)',
     },
+    [theme.breakpoints.down('md')]: {
+        width: '30vw',
+        height: '30vw',
+    },
 }));
 
 const CardLabel = styled(Typography)(({ theme }) => ({
@@ -55,19 +60,27 @@ const CardLabel = styled(Typography)(({ theme }) => ({
     fontWeight: 500,
     cursor: 'pointer',
     userSelect: 'none',
+    [theme.breakpoints.down('md')]: {
+        margin: 0,
+        display: 'none',
+    },
 }));
-
-const styles = {
-    icon: {
-        width: '6vw',
-        height: 'auto',
-        color: '#eaba87',
-    }
-}
 
 function Home() {
 
     const navigate = useNavigate()
+    const theme = useTheme();
+
+    const styles = {
+        icon: {
+            width: '6vw',
+            height: 'auto',
+            color: '#eaba87',
+            [theme.breakpoints.down('md')]: {
+                width: '13vw',
+            },
+        }
+    }
 
     return (
         <Root>
