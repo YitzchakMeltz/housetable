@@ -76,6 +76,11 @@ const PageLoading = styled(CircularProgress)(({ theme }) => ({
   color: "#93795d",
 }));
 
+/**
+ * A Page from which you can view and edit a house in the database.
+ *
+ * @component
+ */
 function ViewHouse() {
   const [sending, setSending] = useState(false);
   const [formDetails, setFormDetails] = useState({});

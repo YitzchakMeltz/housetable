@@ -69,6 +69,11 @@ const Loading = styled(CircularProgress)(({ theme }) => ({
   color: "#FFF",
 }));
 
+/**
+ * A Page from which you can add a house to the database.
+ *
+ * @component
+ */
 function AddHouse() {
   const [formDetails, setFormDetails] = useState({});
   const [errors, setErrors] = useState({});
