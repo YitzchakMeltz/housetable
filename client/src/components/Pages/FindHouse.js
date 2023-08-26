@@ -38,16 +38,18 @@ function FindHouse() {
   const navigate = useNavigate();
   const [id, setId] = useState("");
 
+  const searchForHouse = () => {
+    if (id) {
+      navigate("/view-house?id=" + id);
+    }
+  };
+
   return (
     <Root>
       <Header />
       <SearchContainer>
         <Title>Find out what the risk is on your loan</Title>
-        <SearchBar
-          value={id}
-          setValue={setId}
-          onSearch={() => navigate("/view-house?id=" + id)}
-        />
+        <SearchBar value={id} setValue={setId} onSearch={searchForHouse} />
       </SearchContainer>
     </Root>
   );
