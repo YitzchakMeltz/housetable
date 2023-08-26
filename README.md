@@ -8,7 +8,7 @@ To see if Node is installed, open the command prompt or terminal, and type `node
 2. Open a new terminal and go into the *server* directory using the `cd server` command.
 3. Now that you are in the server directory, run the `npm install` command to install all of the necessary dependacies.
 4. Run the `npm run dev` command to start the server.
-5. 
+
 You should now have the server running on **port 5000**.
 
 *Note: If port 5000 is not available and you need to run the server on a different port this can be changed in the `server.js` file.*
