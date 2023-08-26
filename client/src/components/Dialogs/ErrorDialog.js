@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Dialog, Typography, Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Lottie from "lottie-react";
-import ErrorAnimation from '../resources/lotties/Error.json'
+import ErrorAnimation from '../../resources/lotties/Error.json'
 
 const Root = styled(Dialog)(({ theme }) => ({
     width: '100%',

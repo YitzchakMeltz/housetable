@@ -1,11 +1,9 @@
 import React from 'react';
-import { Grid, Tooltip, IconButton, Dialog, Typography, Button } from '@mui/material';
+import { Grid, Dialog, Typography, Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { ReactComponent as Icon } from '../resources/svg/Icon.svg'
-import { ReactComponent as TextLogo } from '../resources/svg/TextLogo.svg'
 import { useNavigate } from 'react-router';
 import Lottie from "lottie-react";
-import SuccessAnimation from '../resources/lotties/Success.json'
+import SuccessAnimation from '../../resources/lotties/Success.json'
 
 const Root = styled(Dialog)(({ theme }) => ({
     width: '100%',

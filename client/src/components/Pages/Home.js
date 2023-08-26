@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
-import { Grid, Typography, Button } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { ReactComponent as FullLogo } from '../resources/svg/FullLogo.svg'
+import { ReactComponent as FullLogo } from '../../resources/svg/FullLogo.svg'
 import { HomeRounded, AddHomeRounded } from '@mui/icons-material';
 import { useTheme } from '@mui/material/styles';
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import Home from './Home'
-import AddHouse from './AddHouse';
-import ViewHouse from './ViewHouse';
-import FindHouse from './FindHouse';
+import Home from './Pages/Home'
+import AddHouse from './Pages/AddHouse';
+import ViewHouse from './Pages/ViewHouse';
+import FindHouse from './Pages/FindHouse';
 
 function AppRoutes() {
 

@@ -8,10 +8,10 @@ import {
   CircularProgress,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import Header from "./Header";
-import HouseAddedDialog from "./HouseAddedDialog";
-import { validateFieldsExists } from "../utils/validateFieldsExists";
-import ErrorDialog from "./ErrorDialog";
+import Header from "../Generic/Header";
+import HouseAddedDialog from "../Dialogs/HouseAddedDialog";
+import { validateFieldsExists } from "../../utils/validateFieldsExists";
+import ErrorDialog from "../Dialogs/ErrorDialog";
 
 const Root = styled(Grid)(({ theme }) => ({
   width: "100%",

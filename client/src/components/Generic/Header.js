@@ -1,8 +1,8 @@
 import React from 'react';
 import { Grid, Tooltip, IconButton } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { ReactComponent as Icon } from '../resources/svg/Icon.svg'
-import { ReactComponent as TextLogo } from '../resources/svg/TextLogo.svg'
+import { ReactComponent as Icon } from '../../resources/svg/Icon.svg'
+import { ReactComponent as TextLogo } from '../../resources/svg/TextLogo.svg'
 import { useNavigate } from 'react-router';
 
 const Root = styled(Grid)(({ theme }) => ({

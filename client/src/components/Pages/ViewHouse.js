@@ -9,9 +9,9 @@ import {
   CircularProgress,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import Header from "./Header";
-import { validateFieldsExists } from "../utils/validateFieldsExists";
-import ErrorDialog from "./ErrorDialog";
+import Header from "../Generic/Header";
+import { validateFieldsExists } from "../../utils/validateFieldsExists";
+import ErrorDialog from "../Dialogs/ErrorDialog";
 import { useNavigate } from "react-router-dom";
 
 const Root = styled(Grid)(({ theme }) => ({

@@ -10,7 +10,7 @@ import {
 import { styled } from "@mui/material/styles";
 import { useNavigate } from "react-router";
 import { SearchRounded, EastRounded } from "@mui/icons-material";
-import Header from "./Header";
+import Header from "../Generic/Header";
 
 const Root = styled(Grid)(({ theme }) => ({
   width: "100%",
