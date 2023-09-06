@@ -7,7 +7,8 @@ To see if Node is installed, open the command prompt or terminal, and type `node
 1. After completing the previous steps, open the repository in your IDE. This should work in any IDE but these steps were confirmed to be correct in **VS Code**.
 2. Open a new terminal and go into the *server* directory using the `cd server` command.
 3. Now that you are in the server directory, run the `npm install` command to install all of the necessary dependacies.
-4. Run the `npm run dev` command to start the server.
+4. Add your database details in **server/config/config.json** to connect the server to a database. 
+5. Run the `npm run dev` command to start the server.
 
 You should now have the server running on **port 5000**.
 
