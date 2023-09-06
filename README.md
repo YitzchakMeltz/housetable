@@ -24,3 +24,7 @@ This action should open a new tab in your browser at `http://localhost:3000/`, i
 *Note: If localhost:3000 is in use by a different project, you may be asked to open your client on a different port. You can do that.*
 
 That's it! Enjoy!
+
+<div align="center">
+    <img src="Housetable Demo.gif" alt="Logo" width="90%" height="auto">
+</div>
