@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "gactn5y565zwb7r4m2dc",
-    "password": "pscale_pw_JvCVG9drFIiL5P19jIAtfcn9fvne3P6a67mhQC8FGub",
-    "database": "housetable",
-    "host": "aws.connect.psdb.cloud",
+    "username": "username",
+    "password": "database_password",
+    "database": "database_name",
+    "host": "database_host",
     "dialect": "mysql",
     "ssl": true, 
     "dialectOptions": {
@@ -13,17 +13,17 @@
   }
 },
   "test": {
-    "username": "gactn5y565zwb7r4m2dc",
-    "password": "pscale_pw_JvCVG9drFIiL5P19jIAtfcn9fvne3P6a67mhQC8FGub",
-    "database": "housetable",
-    "host": "aws.connect.psdb.cloud",
+    "username": "username",
+    "password": "database_password",
+    "database": "database_name",
+    "host": "database_host",
     "dialect": "mysql"
   },
   "production": {
-    "username": "gactn5y565zwb7r4m2dc",
-    "password": "pscale_pw_JvCVG9drFIiL5P19jIAtfcn9fvne3P6a67mhQC8FGub",
-    "database": "housetable",
-    "host": "aws.connect.psdb.cloud",
+    "username": "username",
+    "password": "database_password",
+    "database": "database_name",
+    "host": "database_host",
     "dialect": "mysql"
   }
 }
